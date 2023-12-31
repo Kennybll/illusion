@@ -2,10 +2,18 @@
   "name": "illusion",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "dev": "bun bin/server.ts"
+  },
   "devDependencies": {
     "bun-types": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.1.11",
+    "hono": "^3.11.11",
+    "zod": "^3.22.4"
   }
 }

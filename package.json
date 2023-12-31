@@ -3,9 +3,15 @@
   "module": "index.ts",
   "type": "module",
   "scripts": {
-    "dev": "bun bin/server.ts"
+    "dev": "bun --watch bin/server.ts",
+    "lint": "bunx @biomejs/biome lint .",
+    "format": "bunx @biomejs/biome format .",
+    "format:write": "bunx @biomejs/biome format . --write",
+    "check": "bunx @biomejs/biome check .",
+    "check:apply": "bunx @biomejs/biome check . --apply"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.4.1",
     "bun-types": "latest"
   },
   "peerDependencies": {

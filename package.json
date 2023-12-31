@@ -8,18 +8,24 @@
     "format": "bunx @biomejs/biome format .",
     "format:write": "bunx @biomejs/biome format . --write",
     "check": "bunx @biomejs/biome check .",
-    "check:apply": "bunx @biomejs/biome check . --apply"
+    "check:apply": "bunx @biomejs/biome check . --apply",
+    "db:generate": "drizzle-kit generate:mysql ",
+    "db:migrate": "bun ./src/database/migrate.ts",
+    "db:studio": "bunx drizzle-kit studio:mysql2"
   },
   "devDependencies": {
     "@biomejs/biome": "1.4.1",
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "drizzle-kit": "^0.20.9"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
     "@hono/zod-validator": "^0.1.11",
+    "drizzle-orm": "^0.29.2",
     "hono": "^3.11.11",
+    "mysql2": "^3.6.5",
     "zod": "^3.22.4"
   }
 }
